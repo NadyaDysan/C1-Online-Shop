@@ -1,0 +1,330 @@
+ @-webkit-keyframes heartbeat {
+     from {
+         -webkit-transform: scale(1);
+         transform: scale(1);
+         -webkit-transform-origin: center center;
+         transform-origin: center center;
+         -webkit-animation-timing-function: ease-out;
+         animation-timing-function: ease-out;
+     }
+
+     10% {
+         -webkit-transform: scale(0.91);
+         transform: scale(0.91);
+         -webkit-animation-timing-function: ease-in;
+         animation-timing-function: ease-in;
+     }
+
+     17% {
+         -webkit-transform: scale(0.98);
+         transform: scale(0.98);
+         -webkit-animation-timing-function: ease-out;
+         animation-timing-function: ease-out;
+     }
+
+     33% {
+         -webkit-transform: scale(0.87);
+         transform: scale(0.87);
+         -webkit-animation-timing-function: ease-in;
+         animation-timing-function: ease-in;
+     }
+
+     45% {
+         -webkit-transform: scale(1);
+         transform: scale(1);
+         -webkit-animation-timing-function: ease-out;
+         animation-timing-function: ease-out;
+     }
+ }
+
+ @keyframes heartbeat {
+     from {
+         -webkit-transform: scale(1);
+         transform: scale(1);
+         -webkit-transform-origin: center center;
+         transform-origin: center center;
+         -webkit-animation-timing-function: ease-out;
+         animation-timing-function: ease-out;
+     }
+
+     10% {
+         -webkit-transform: scale(0.91);
+         transform: scale(0.91);
+         -webkit-animation-timing-function: ease-in;
+         animation-timing-function: ease-in;
+     }
+
+     17% {
+         -webkit-transform: scale(0.98);
+         transform: scale(0.98);
+         -webkit-animation-timing-function: ease-out;
+         animation-timing-function: ease-out;
+     }
+
+     33% {
+         -webkit-transform: scale(0.87);
+         transform: scale(0.87);
+         -webkit-animation-timing-function: ease-in;
+         animation-timing-function: ease-in;
+     }
+
+     45% {
+         -webkit-transform: scale(1);
+         transform: scale(1);
+         -webkit-animation-timing-function: ease-out;
+         animation-timing-function: ease-out;
+     }
+ }
+
+
+
+ .top_cart {
+     height: 400px;
+     background-image: url(../img/top_cart.jpg);
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+ }
+
+ .heading_big {
+     font-weight: 600;
+     font-size: 64px;
+     line-height: 70px;
+     margin-top: 127px;
+     color: $mainColor;
+ }
+
+ .cart {
+     display: grid;
+     grid-template-columns: repeat(12, 1fr);
+     gap: 32px;
+     margin-top: 64px;
+
+     &_name-box {
+         display: flex;
+         justify-content: space-between;
+         padding-bottom: 14px;
+     }
+
+     &_name {
+         font-weight: 500;
+         font-size: 24px;
+         line-height: 29px;
+         color: $colorSupport;
+     }
+
+     &_item {
+         border-top: 0.5px solid #CACDD8;
+         padding-top: 25px;
+         padding-bottom: 32px;
+         display: flex;
+         justify-content: space-between;
+         align-items: flex-start;
+     }
+
+     &_left {
+         display: flex;
+         gap: 32px;
+     }
+
+     &_info {
+         display: flex;
+         flex-direction: column;
+         gap: 14px;
+     }
+
+     &_form {
+         background: $colorBackground;
+         border-radius: 20px;
+         height: 556px;
+         grid-column: span 4;
+         display: flex;
+         flex-direction: column;
+
+         &_title {
+             font-family: 'Poppins', sans-serif;
+             font-style: normal;
+             font-weight: 600;
+             font-size: 24px;
+             line-height: 36px;
+             display: flex;
+             align-items: center;
+             text-align: center;
+             color: $colorSupport;
+             padding-top: 42px;
+             padding-bottom: 35px;
+             justify-content: center;
+         }
+
+         &_input {
+             font-family: 'Montserrat';
+             font-style: normal;
+             font-weight: 400;
+             font-size: 14px;
+             line-height: 17px;
+             display: grid;
+             color: $colorSupport;
+             flex-direction: column;
+             gap: 41px;
+         }
+
+         &_name,
+         &_tel,
+         &_address {
+             font-family: 'Montserrat';
+             font-style: normal;
+             font-weight: 400;
+             font-size: 14px;
+             line-height: 17px;
+             display: grid;
+             grid-column: span 4;
+             color: $colorSupport;
+             border: none;
+             border-bottom: 1px solid #CACDD8;
+             background: $colorBackground;
+             margin-left: 27px;
+             margin-right: 64px;
+
+             &::placeholder {
+                 color: $colorSupport;
+             }
+         }
+
+         &_total {
+             font-style: normal;
+             font-weight: 400;
+             font-size: 24px;
+             line-height: 29px;
+             display: flex;
+             align-items: center;
+             text-align: center;
+             color: $colorSupport;
+             flex-wrap: wrap;
+             justify-content: center;
+             padding-top: 64px;
+             padding-bottom: 24px;
+             row-gap: 24px;
+             column-gap: 6px;
+         }
+
+         &_submit {
+             width: 100%;
+             font-family: 'Montserrat';
+             background: transparent;
+             width: 288px;
+             border: 1px solid $colorSupport;
+             border-radius: 20px;
+             font-style: normal;
+             cursor: pointer;
+             line-height: 20px;
+             font-weight: 400;
+             font-size: 16px;
+             display: grid;
+             grid-template-areas: "select";
+             align-items: center;
+             padding: 11px 22px 10px 14px;
+             -webkit-animation: heartbeat 1.5s ease-in-out 3;
+             animation: heartbeat 1.5s ease-in-out 3;
+             transition: all .5s ease;
+             &:hover{
+                background:  black;
+                color: $mainColor;        
+             }
+         }
+     }
+
+     &_button {
+         width: 100%;
+         font-family: 'Montserrat';
+         background: transparent;
+         border: 1px solid $colorSupport;
+         border-radius: 20px;
+         font-style: normal;
+         cursor: pointer;
+         line-height: 20px;
+         font-weight: 400;
+         font-size: 14px;
+         display: grid;
+         grid-template-areas: "select";
+         align-items: center;
+         padding: 11px 22px 10px 14px;
+         transition: all .5s ease;
+
+         &:hover {
+             background: black;
+             color: $mainColor;
+         }
+     }
+
+     &_content {
+         grid-column: span 8;
+     }
+
+     &_link-box {
+         font-weight: 400;
+         font-size: 14px;
+         line-height: 210%;
+         display: flex;
+         align-items: center;
+         text-align: center;
+         text-decoration-line: underline;
+         color: $colorSupport;
+         display: flex;
+         gap: 30px;
+
+         &_options {
+             transition: all .3s ease;
+
+             &:hover {
+                 transform: scale(1.03)
+             }
+         }
+     }
+
+     &_features {
+         font-weight: 400;
+         font-size: 14px;
+         line-height: 17px;
+         color: $colorLink;
+         padding-top: 6px;
+         padding-bottom: 16px;
+         width: 276px;
+     }
+
+     &_price {
+         font-weight: 500;
+         font-size: 16px;
+         line-height: 20px;
+         display: flex;
+         align-items: center;
+         text-align: center;
+         color: $colorPrice2;
+     }
+
+ }
+
+ .amount {
+     border: none;
+     width: 71px;
+     height: 51px;
+     left: 837px;
+     top: 523px;
+     background: $colorBackground;
+     font-family: 'Poppins';
+     border-radius: 6px;
+     font-style: normal;
+     font-weight: 600;
+     font-size: 14px;
+     line-height: 210%;
+     display: flex;
+     align-items: center;
+     text-align: center;
+     color: $colorSupport;
+ }
+
+ .low_buttons {
+     display: grid;
+     gap: 8px;
+     grid-template-columns: repeat(auto-fill, minmax(164px, 1fr));
+     padding-top: 36px;
+ }
